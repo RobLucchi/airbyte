@@ -1,0 +1,43 @@
+{
+    "documentationUrl": "https://docsurl.com",
+    "connectionSpecification": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Clockify Spec",
+        "type": "object",
+        "required": [
+            "workspaceId",
+            "X-Api-Key"
+        ],
+        "properties": {
+            "workspaceId": {
+                "type": "string",
+                "description": "WorkSpace Id"
+            },
+            "X-Api-Key": {
+                "title": "API Key",
+                "description": "Clockify User API Key",
+                "type": "string",
+                "examples": [
+                    "ABCDEFGHIJKLMNOPRSTUWXYZ"
+                ],
+                "airbyte_secret": true
+            },
+            "start": {
+                "type": "string",
+                "format": "date",
+                "description": "Start date to get entires from",
+                "examples": [
+                    "2021-01-01"
+                ]
+            },
+            "end": {
+                "type": "string",
+                "format": "date",
+                "description": "End date to get entires at",
+                "examples": [
+                    "2021-01-31"
+                ]
+            }
+        }
+    }
+}
