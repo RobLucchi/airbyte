@@ -37,6 +37,13 @@
                 "examples": [
                     "2021-01-31"
                 ]
+            },
+            "duration": {
+                "type": "integer",
+                "description": "in days",
+                "examples": [
+                    "30"
+                ]
             }
         }
     }
