@@ -1,0 +1,44 @@
+{
+  "documentationUrl": "https://docs.airbyte.com/integrations/destinations/vectara",
+  "supported_destination_sync_modes": [ "append" ],
+  "supportsIncremental": true,
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Destination Vectara",
+    "type": "object",
+    "required": [
+      "apiKey",
+      "customerId",
+      "corpusId"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "API KEy"
+      },
+      "customerId": {
+        "type": "integer",
+        "description": "customerId"
+      },
+      "corpusId": {
+        "type": "integer",
+        "description": "corpusId"
+      },
+      "documentMetaData": {
+        "type": "array",
+        "description": "List of Feilds to be Metadata at Documents",
+        "items": {
+          "type": "string"
+        }
+      },
+      "textFeilds": {
+        "type": "array",
+        "description": "List of Feilds to be Text",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
